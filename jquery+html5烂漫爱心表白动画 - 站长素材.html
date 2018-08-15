@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0035)http://www.mer2014.com/plugin/love/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>jquery+html5烂漫爱心表白动画 - 站长素材</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="./jquery+html5烂漫爱心表白动画 - 站长素材_files/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./jquery+html5烂漫爱心表白动画 - 站长素材_files/jquery.js"></script>
+<script type="text/javascript" src="./jquery+html5烂漫爱心表白动画 - 站长素材_files/garden.js"></script>
+<script type="text/javascript" src="./jquery+html5烂漫爱心表白动画 - 站长素材_files/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content" style="width: 1110px; height: 625px; margin-top: 65px; margin-left: 245px;">
+		<div id="code" style="margin-top: 112.5px;">
+			<span class="comments">/**</span><br>
+			<span class="space"><span class="comments">*2015-6-10,</span><br>
+			<span class="space"><span class="comments">*2015-6-10.</span><br>
+			<span class="space"><span class="comments">*/</span><br>
+			Boy name = <span class="keyword">Mr</span> 群主<br>
+			Girl name = <span class="keyword">Mrs</span> 母猪<br>
+			<span class="comments">// Fall in love river. 坠入爱河</span><br>
+			The boy love the girl;<br>
+			<span class="comments">// They love each other.他们彼此相爱</span><br>
+			The girl loved the boy;<br>
+			<span class="comments">// AS time goes on.随着时间的推移</span><br>
+			The boy can not be separated the girl;<br>
+			<span class="comments">// At the same time.在同一时间</span><br>
+			The girl can not be separated the boy;<br>
+			<span class="comments">// Both wind and snow all over the sky.天空都是风和雪</span><br>
+			<span class="comments">// Whether on foot or 5 kilometers.</span><br>
+			<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br>
+			<span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br>
+			<span class="placeholder"><span class="comments">// Whether it is right now不管是现在</span><br>
+			<span class="placeholder"><span class="comments">// Still in the distant future.还是未来</span><br>
+			<span class="placeholder">The boy has but one dream;男孩只有一个梦想<br>
+			<span class="comments">// The boy wants the girl could well have been happy.男孩想要女孩开心</span><br>
+			<br>
+			<br>
+			I want to say:我想说<br>
+			Baby, I love you forever;宝贝，我爱你到永远<br>
+		</span></span></span></span></span></span></div>
+		<div id="loveHeart">
+			<canvas id="garden" width="670" height="625"></canvas>
+			<div id="words" style="position: absolute; top: 260px; left: 755px;">
+				<div id="messages" style="display: block;">
+					亲爱的，从现在开始一起相爱的时光<br>
+					他会记录着我们这一辈子在一起的时间
+					<div id="elapseClock"><span class="digit">57</span> days <span class="digit">18</span> hours <span class="digit">18</span> minutes <span class="digit">04</span> seconds</div>
+				</div>
+				<div id="loveu" style="display: block;">
+					爱你直到永永远远。<br>
+					<div class="signature">- 石</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2017, 5, 26);
+together.setHours(15);
+together.setMinutes(31);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body></html>
